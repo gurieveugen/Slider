@@ -1,9 +1,5 @@
 jQuery(document).ready(function() {
-    jQuery(".dial").knob({
-		'draw' : function () { 
-			jQuery(this.i).val(this.cv + '%')
-		}
-	});
+    jQuery(".dial").knob();
 	jQuery('.dial').css('font-size', '36px/123px');
 	jQuery('.dial').css('z-index', '99999');
 });
