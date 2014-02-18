@@ -1,0 +1,15 @@
+#adminmenu #menu-posts-slide .wp-menu-image:before {
+	content: "\f03e";  
+ 	font-family: 'FontAwesome' !important;
+ 	font-size: 18px !important;
+}
+
+#adminmenu #menu-posts-tool .wp-menu-image:before {
+	content: "\f0ad";  
+ 	font-family: 'FontAwesome' !important;
+ 	font-size: 18px !important;
+}
+
+.gcslider label{
+	display: block;
+}
