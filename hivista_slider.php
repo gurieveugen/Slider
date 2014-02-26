@@ -212,11 +212,13 @@ class Slider{
 				$args        = array('class' => 'image', 'alt' => $value->post_title, 'title' => $value->post_title);
 				$meta        = get_post_meta($key, 'slider', true);
 				$slides_html.= '<li id="hivista_slide'.$i.'"'.$this->active(($i == $active)).'>
-									<div class="text"><img alt="image description" src="/wp-content/themes/techbridge/images/text-why-be-a-strong.png"></div>
+									<div class="text">
+										<img alt="image description" src="/wp-content/themes/techbridge/images/text-for-girl-2.png">
+									</div>
 									<div class="row cf">
-										<a class="link" href="#" onclick="nextSlide(); return false;">next</a>
+										<a class="link jcarousel-slider-control-next" href="#">next</a>
 										<div class="holder cf">
-											<p><span class="s-text">'.$meta['prev_text'].'</span><strong class="percentage"><input type="text" class="dial" data-fgColor="#BFD62F" data-inputColor="#ffffff" data-thickness=".3" data-font="BrandonGrotesqueBlack" data-readOnly="true" data-width="121" data-min="0" data-max="100" value="'.$meta['precent'].'"></strong> <span class="s-text">'.$meta['next_text'].'</span></p>
+											<p><span class="s-text">'.$meta['prev_text'].'</span><strong class="percentage p-'.$meta['precent'].'"><span>'.$meta['precent'].'%</span></strong> <span class="s-text">'.$meta['next_text'].'</span></p>
 										</div> 
 									</div>
 									'.get_the_post_thumbnail($key, 'slide-image', $args).'								
@@ -226,8 +228,10 @@ class Slider{
 			}
 		}
 		$out = '<section class="slider-holder">';
+		$out.= '<div class="jcarousel-slider">';
 		$out.= '<ul class="slides">'.$slides_html.'</ul>';
-		$out.= '<ul class="switcher cf">'.$indicators.'</ul>';
+		$out.= '</div><!-- jcarousel -->';
+		$out.= '<ul class="jcarousel-slider-pagination switcher cf"></ul>';
 		$out.= '</section><!-- slider-holder -->';
 		return $out;
 	}
