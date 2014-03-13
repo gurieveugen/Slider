@@ -55,7 +55,6 @@ class Slider{
 		// =========================================================
 		else
 		{
-			wp_enqueue_script('knob', $this->plugin_url.'/js/jquery.knob.js', array('jquery'));
 			wp_enqueue_script('slider', $this->plugin_url.'/js/slider.js', array('jquery'));
 		}
 	}

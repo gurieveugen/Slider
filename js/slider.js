@@ -3,7 +3,8 @@ jQuery(document).ready(function() {
 
     jcarousel.on('jcarousel:reload jcarousel:create', function () {
 			jcarousel.jcarousel('items').width(jcarousel.innerWidth()); }).jcarousel({
-			wrap: 'circular'});
+                wrap: 'circular'});
+    setInterval("jQuery('.jcarousel-slider').jcarousel('scroll', '+=1')", 4000);
 
     jQuery('.jcarousel-slider-control-prev').jcarouselControl({ target: '-=1' });
 
